@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Bulbs", "link": "category-bulb.html" },
+    { "id": 2, "name": "Lubricants", "link": "category-lubricants.html" },
+    { "id": 3, "name": "Belts", "link": "category-belts.html" },
+    { "id": 4, "name": "Home Appliances", "link": "home-appliances.html" }
+]

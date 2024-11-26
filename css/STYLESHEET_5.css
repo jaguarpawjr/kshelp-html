@@ -1,0 +1,46 @@
+/* Navbar Styling */
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link.active {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Product and Category Cards */
+.product-card img, .category-card img {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.product-card, .category-card {
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover, .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.footer {
+    color: #fff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-card img, .category-card img {
+        max-height: 150px;
+    }
+}
