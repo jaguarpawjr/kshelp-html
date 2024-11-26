@@ -1,0 +1,29 @@
+
+ /* Custom CSS for product grid */
+ nav img ,footer img{
+    width: 25%;
+    height: fit-content;
+}
+nav li{
+    display: inline;
+    text-transform: uppercase;
+}
+               
+@media (min-width:100px) {
+    nav img{
+        width: 20%;
+        height: fit-content;
+    }
+    footer img{
+        width: 200px;
+    }
+    #navigation{
+        display: flex;
+        margin: 0;
+    
+    }
+}
+
+footer{
+	height: 280px;
+}

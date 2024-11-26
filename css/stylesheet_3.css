@@ -1,0 +1,56 @@
+nav img ,footer img{
+    width: 25%;
+    height: fit-content;
+}
+nav li{
+    display: inline;
+    text-transform: uppercase;
+}
+
+ #card img {
+
+height: 520px;
+
+/* } 
+#CATEGORY img{
+
+    width: 100px; */
+}
+#brakefluid{
+    height: 200px;
+}
+#CATEGORY img{
+    width: 500px;
+    height: 400px;
+}
+/* nav ul{
+    flex-wrap: nowrap;
+} */
+/* nav button{
+    display: none;
+}  */
+/* nav a{
+    display: inline;
+} */
+footer{
+	height: 480px;
+}
+
+@media (min-width:100px) {
+    nav img{
+        width: 20%;
+        height: fit-content;
+    }
+    footer img{
+        width: 200px;
+    }
+    #navigation{
+        display: flex;
+        margin: 0;
+    
+    }
+    footer{
+	height: 300px;
+}
+}
+

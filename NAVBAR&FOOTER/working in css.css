@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    
+}
+.nav-links{
+    display: flex;
+ list-style-type: none;
+ justify-content: space-evenly;
+ gap: 1.5rem;
+    
+}
+.nav-links a{
+    color: aliceblue;
+}
+img{
+    padding: 0.3rem 2rem;
+}
+
+footer{
+display: flex;
+justify-content: space-evenly;
+background-color: #333;
+
+
+}
+ul,h4{
+    text-align: center;
+    margin: 6pt;
+    color: azure;
+}
+.footer-links{
+    display: inline-block;
+    list-style-type: none;
+}
