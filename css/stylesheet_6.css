@@ -13,6 +13,9 @@
     background-color: #f8f9fa;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -93,7 +96,7 @@
 .footer {
     background-color: #343a40;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

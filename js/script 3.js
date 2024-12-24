@@ -171,7 +171,7 @@ async function showProducts(params) { //the async function By using async and aw
 
     const container=document.getElementById('displayProducts') 
 
-    for(file of htmlFiles){ //for each html file in the htmlFiles
+    for(let file of htmlFiles){ //for each html file in the htmlFiles
         
     try{
     const response = await fetch(file);
@@ -195,12 +195,13 @@ async function showProducts(params) { //the async function By using async and aw
 
 
 catch(err){
-console.error(`Error loading ${file}:`, err);
+    console.error(`Error loading file at index ${htmlFiles.indexOf(file)} (${file}):`, err);
+
 }
 }
 }//this is an error handler so Error loading indicating the html file and the eror associated with it 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', ()=> {
        showProducts(); 
    });//this is to make sure the Dom structure loads before the javascript code so tha we don't call empty tags
 
