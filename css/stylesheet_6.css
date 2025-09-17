@@ -63,19 +63,38 @@
     color: #333;
 }
 
-.product-card a {
+.product-card a,
+.product-card .select-btn {
     margin-top: 10px;
     display: inline-block;
     color: #fff;
-    background-color: #007bff;
-    padding: 8px 15px;
-    border-radius: 5px;
+    background-color: #0d6efd; /* Bootstrap 5 primary */
+    padding: 8px 14px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    border: 1px solid #0d6efd;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.05s ease;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 
-.product-card a:hover {
-    background-color: #0056b3;
+.product-card a:hover,
+.product-card .select-btn:hover {
+    background-color: #0b5ed7; /* darker primary */
+}
+
+.product-card .select-btn:focus,
+.product-card a:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.35);
+}
+
+.product-card .select-btn:active,
+.product-card a:active {
+    transform: translateY(1px);
 }
 
 .product-card:hover {
