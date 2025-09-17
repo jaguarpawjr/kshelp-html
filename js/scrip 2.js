@@ -1,6 +1,8 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-
+document.addEventListener('click',(event)=>{
+   if (event.target && event.target.classList.contains('select-btn'))
+{
    const buttons=document.querySelectorAll('.select-btn')
    
 buttons.forEach(button=> {
@@ -11,14 +13,21 @@ buttons.forEach(button=> {
             const proPrice=button.getAttribute('data-price')
     
             const jsonData={
-                Name:[proName],
-                image:[proImage],
-                price:[proPrice],
+                Name:proName,
+                image:proImage,
+                price:proPrice,
+                quantity:1
     
             }
-            let selectedItems=JSON.parse(localStorage.getItem('selectedItems')) || []
+
+            let selectedItems=JSON.parse(localStorage.getItem('selectedItems')) ;
+            if (!Array.isArray(selectedItems)) {
+                selectedItems = []; // Initialize as an empty array if it's not already one
+            }
             selectedItems.push(jsonData);
-            localStorage.setItem('selectedItems',JSON.stringify(jsonData))
+            localStorage.setItem('selectedItems',JSON.stringify(selectedItems))
             alert(`${proName}`);
+            console.log(event.target);}
     
-        })})})
+)})}})})
+        

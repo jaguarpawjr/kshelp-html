@@ -160,18 +160,20 @@
 
 
 
+
 let htmlFiles = [
-    'category-lubricants.html',
-    'category-bulb.html',
-    'category-belts.html',
-]
+    'components/category-belts.html',
+    'components/category-bulb.html',
+    'components/category-lubricants.html'
+  ];
+  
 // this is the list of the html files i want to be importing products from
   
 async function showProducts(params) { //the async function By using async and await, you can handle operations that take time (like fetching data from an API) without blocking the execution of the rest of your code.
 
     const container=document.getElementById('displayProducts') 
 
-    for(file of htmlFiles){ //for each html file in the htmlFiles
+    for(let file of htmlFiles){ //for each html file in the htmlFiles
         
     try{
     const response = await fetch(file);
@@ -195,12 +197,13 @@ async function showProducts(params) { //the async function By using async and aw
 
 
 catch(err){
-console.error(`Error loading ${file}:`, err);
+    console.error(`Error loading file at index ${htmlFiles.indexOf(file)} (${file}):`, err);
+
 }
 }
 }//this is an error handler so Error loading indicating the html file and the eror associated with it 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', ()=> {
        showProducts(); 
    });//this is to make sure the Dom structure loads before the javascript code so tha we don't call empty tags
 
